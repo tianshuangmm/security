@@ -4,6 +4,8 @@ spring:
 
 ---
 spring:
+  session:
+    store-type: none
   profiles: dev
   # 数据库配置
   datasource:
@@ -15,3 +17,6 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
 server:
   port: 8080
+security:
+  basic:
+    enabled: false

@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.lemon.security</groupId>
         <artifactId>lemon-security</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
         <relativePath>../lemon-security</relativePath>
     </parent>
     <groupId>com.lemon.security</groupId>
     <artifactId>lemon-security-demo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>lemon-security-demo</name>
-    <description>Demo project for Spring Boot</description>
+    <version>${lemon.security.version}</version>
+    <packaging>jar</packaging>
+    <description>Spring Security技术栈开发企业级认证与授权案例项目</description>
 
     <dependencies>
         <!-- 首先学习的是浏览器端的安全开发 -->
@@ -52,6 +53,5 @@
             </plugin>
         </plugins>
     </build>
-
 
 </project>
