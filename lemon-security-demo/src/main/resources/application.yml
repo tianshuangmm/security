@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: dev
+  # 数据库配置
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring-security?characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+    # 配置Druid连接池
+    type: com.alibaba.druid.pool.DruidDataSource
+server:
+  port: 8080
