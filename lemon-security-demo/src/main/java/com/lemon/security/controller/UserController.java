@@ -2,6 +2,7 @@ package com.lemon.security.controller;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import com.lemon.security.dao.User;
+import com.lemon.security.exception.UserNotExistException;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import org.springframework.data.domain.Pageable;
@@ -54,6 +55,7 @@ public class UserController {
     @GetMapping("/getSimpleUser")
     @JsonView(User.UserSimpleView.class)
     public User getSimpleUser(){
+        System.out.println("getSimpleUser 方法执行了、、、、、、");
         User user = new User();
         user.setUsername("lemon");
         user.setPassword("123456");
@@ -102,5 +104,9 @@ public class UserController {
         user.setId("4");
         return user;
     }
+   /* @GetMapping("/error")
+    public String errordemo() throws UserNotExistException {
+        throw  new UserNotExistException(1);
+    }*/
 
 }
